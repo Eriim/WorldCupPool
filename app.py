@@ -4,8 +4,8 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
 import datetime
 
-now=datetime.datetime.now()
-print(now)
+
+
 
 app=Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI']='postgresql://postgres:devils@localhost:5432/WCP_DB'
@@ -78,10 +78,12 @@ class Pool(db.Model):
     id=db.Column(db.Integer, primary_key=True)
     name=db.Column(db.String(50))
     date=db.Column(db.Date)
+    password=db.Column(db.String(50))
 
-    def __init__(self, name, date):
+    def __init__(self, name, date, password):
         self.name=name
         self.date=date
+        self.password=password
 class PoolUsers(db.Model):
     __tablename__="poolusers"
     id=db.Column(db.Integer, primary_key=True)
@@ -95,6 +97,16 @@ class PoolUsers(db.Model):
         self.user_id=user_id
         self.score=score
         self.date=date
+
+class Standing():
+    def __init__(self, username, score, position):
+        self.username=username
+        self.score=score
+        self.position=position
+
+
+
+
 def login_required(function_to_protect):
     @wraps(function_to_protect)
     def wrapper(*args, **kwargs):
@@ -113,7 +125,7 @@ def login_required(function_to_protect):
 
 @app.route("/")
 def index():
-    return render_template("error.html")
+    return render_template("login.html")
 @app.route("/createAccount", methods=['POST'])
 def success():
     if request.method=='POST':
@@ -136,8 +148,10 @@ def login():
         password=request.form["password"]
         verifyUser=db.session.query(User).filter(User.username==username).first()
         if verifyUser.password == password:
-            return render_template("groupStage.html")
+            session['userId'] = verifyUser.id
+            return render_template("index.html")
     return render_template("login.html", text="Whoops, something went wrong please try again")
+# ChoosePool Loads the pool selection page.
 @app.route("/choosePool")
 def choosePool():
     data = db.session.query(Pool).all()
@@ -149,10 +163,75 @@ def createUser():
 def selectPool():
     if request.method=='POST':
         id=request.form["id"]
+        password=request.form["password"]
+        verifypassword=db.session.query(Pool).filter(Pool.id==id).first()
+        if verifypassword.password == password:
+            now=datetime.datetime.now()
 
-        return render_template("success.html", text=id)
+            userId= session.get('userId')
+            poolUser = PoolUsers(id, userId, 0, now)
+            db.session.add(poolUser)
+            db.session.commit()
 
+            return render_template("success.html", text=id)
+
+    return render_template("error.html", text=id)
+@app.route("/logout", methods=['POST'])
+def logout():
+    if request.method=='POST':
+        session.clear()
+        return render_template("/index.html")
+@app.route("/groupStagePicks")
+def groupStagePicks():
+    return render_template("groupStage.html")
+@app.route("/groupStagePrediction", methods=['POST'])
+def gsPrediction():
+    if request.method=='POST':
+        userId=session.get('userId')
+        now=datetime.datetime.now()
+        i = 1
+        k = 2
+        matchCounter = 1
+        while matchCounter < 49:
+            prediction1=request.form[str(i)]
+            prediction2=request.form[str(k)]
+            i += 2
+            k += 2
+            prediction = Prediction(matchCounter, userId, prediction1, prediction2, now)
+            db.session.add(prediction)
+            matchCounter += 1
+        db.session.commit()
+        return render_template("/success.html", text="Congratulations on making your group stage predictions.")
+@app.route("/viewStandings", methods=['POST'])
+def viewStandings():
+    if request.method=='POST':
+        pool=db.session.query(Pool).filter(Pool.id==request.form['id']).first()
+
+        poolusers = db.session.query(PoolUsers).filter(PoolUsers.pool_id==pool.id).order_by(PoolUsers.score).all()
+        standingList = list()
+        counter=1
+        for pu in poolusers:
+            id=pu.user_id
+            user = db.session.query(User).filter(User.id==id).first()
+            print(user.username)
+            standing = Standing(user.username, pu.score, counter)
+            standingList.append(standing)
+            counter+=1
+        return render_template("viewStandings.html", data=standingList, title=pool.name)
+@app.route("/querytest")
+def querytest():
+    poolId=1
+    poolusers = db.session.query(User).join(PoolUsers).filter(PoolUsers.pool_id==poolId).order_by(PoolUsers.score).all()
+    users = list()
+    for pu in poolusers:
+        print(users)
+
+
+
+    return render_template("viewStandings.html", data=poolusers)
 
 if __name__ == '__main__':
+    app.secret_key='A0Zr98j/3yX R~XHH!jmN]LWX/,?RT'
     app.debug=True
+
     app.run()

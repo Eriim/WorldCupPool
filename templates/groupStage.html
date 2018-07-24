@@ -1,50 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-  <title>World Cup Pool</title>
-  <head>
-    <meta charset="utf-8">
-    <meta id="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../static/style.css" >
-    <script src="../static/js/jquery-3.3.1.js"></script>
-    <script src="../static/js/bootstrap.min.js"></script>
-    <script src="../static/js/myscript.js"></script>
-  </head>
-    <body>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta id="viewport" content="wnameth=device-wnameth, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../static/style.css" >
+  <script src="../static/js/jquery-3.3.1.js"></script>
+  <script src="../static/js/bootstrap.min.js"></script>
 
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">World Cup Pool</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <script src="../static/js/myscript.js"></script>
+</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">World Cup Pool</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Group Stage <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">View Standings</a>
-      </li>
+        <div class="collapse navbar-collapse" name="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Group Stage <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">View Standings</a>
+            </li>
 
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-
+          </ul>
+          <form action="logout" method="POST" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="hnameden" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
+          </form>
+        </div>
+      </nav>
 
 
 
 
-      <div class="container-fluid">
+
+      <div class="container-fluname">
 
 
       <div class="row">
       <div class="col-sm-6">
-        <form action="success.html" method="POST">
+        <form action="groupStagePrediction" method="POST">
           <h4>Group Stage - Matchday 1 of 3</h4>
           <div class="table-responsive">
           <table class="table-striped table">
@@ -62,9 +61,9 @@
               <td>06-14</td>
               <td>11:00 am</td>
               <td>Russia</td>
-              <td><input type="number" name="ru" onkeypress="return event.charCode >= 48" min="0" id="1" value="0"/> </td>
+              <td><input type="number" id="ru" onkeypress="return event.charCode >= 48" min="0" name="1" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="sa" onkeypress="return event.charCode >= 48" min="0" id="2" value="0"/> </td>
+              <td><input type="number" id="sa" onkeypress="return event.charCode >= 48" min="0" name="2" value="0"/> </td>
               <td>Saudi Arabia</td>
             </tr>
             <tr>
@@ -72,9 +71,9 @@
               <td>06-15</td>
               <td>8:00 am</td>
               <td>Egypt</td>
-              <td><input type="number" name="eg" onkeypress="return event.charCode >= 48" min="0" id="3" value="0"/> </td>
+              <td><input type="number" id="eg" onkeypress="return event.charCode >= 48" min="0" name="3" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="uy" onkeypress="return event.charCode >= 48" min="0" id="4" value="0"/> </td>
+              <td><input type="number" id="uy" onkeypress="return event.charCode >= 48" min="0" name="4" value="0"/> </td>
               <td>Uruguay</td>
 
             </tr>
@@ -83,9 +82,9 @@
               <td>06-15</td>
               <td>11:00 am</td>
               <td>Morocco</td>
-              <td><input type="number" name="ma" onkeypress="return event.charCode >= 48" min="0" id="5" value="0"/> </td>
+              <td><input type="number" id="ma" onkeypress="return event.charCode >= 48" min="0" name="5" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ir" onkeypress="return event.charCode >= 48" min="0" id="6" value="0"/> </td>
+              <td><input type="number" id="ir" onkeypress="return event.charCode >= 48" min="0" name="6" value="0"/> </td>
               <td>Iran</td>
 
 
@@ -95,9 +94,9 @@
               <td>06-15</td>
               <td>2:00 pm</td>
               <td>Portugal</td>
-              <td><input type="number" name="pt" onkeypress="return event.charCode >= 48" min="0" id="7" value="0"/> </td>
+              <td><input type="number" id="pt" onkeypress="return event.charCode >= 48" min="0" name="7" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="es" onkeypress="return event.charCode >= 48" min="0" id="8" value="0"/> </td>
+              <td><input type="number" id="es" onkeypress="return event.charCode >= 48" min="0" name="8" value="0"/> </td>
               <td>Spain</td>
 
 
@@ -107,9 +106,9 @@
               <td>06-16</td>
               <td>6:00 am</td>
               <td>France</td>
-              <td><input type="number" name="fr"  onkeypress="return event.charCode >= 48" min="0" id="9" value="0"/> </td>
+              <td><input type="number" id="fr"  onkeypress="return event.charCode >= 48" min="0" name="9" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="au" onkeypress="return event.charCode >= 48" min="0" id="10" value="0"/> </td>
+              <td><input type="number" id="au" onkeypress="return event.charCode >= 48" min="0" name="10" value="0"/> </td>
               <td>Australia</td>
 
 
@@ -119,9 +118,9 @@
               <td>06-16</td>
               <td>9:00 am</td>
               <td>Argentina</td>
-              <td><input type="number" name="ar"  onkeypress="return event.charCode >= 48" min="0" id="11" value="0"/> </td>
+              <td><input type="number" id="ar"  onkeypress="return event.charCode >= 48" min="0" name="11" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="is"  onkeypress="return event.charCode >= 48" min="0" id="12" value="0"/> </td>
+              <td><input type="number" id="is"  onkeypress="return event.charCode >= 48" min="0" name="12" value="0"/> </td>
               <td>Iceland</td>
 
 
@@ -132,9 +131,9 @@
               <td>06-16</td>
                 <td>12:00 pm</td>
               <td>Peru</td>
-              <td><input type="number" name="pe" onkeypress="return event.charCode >= 48" min="0" id="13" value="0"/> </td>
+              <td><input type="number" id="pe" onkeypress="return event.charCode >= 48" min="0" name="13" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="dk" onkeypress="return event.charCode >= 48" min="0" id="14" value="0"/> </td>
+              <td><input type="number" id="dk" onkeypress="return event.charCode >= 48" min="0" name="14" value="0"/> </td>
               <td>Denmark</td>
 
 
@@ -145,9 +144,9 @@
               <td>06-16</td>
               <td>3:00 pm</td>
               <td>Croatia</td>
-              <td><input type="number" name="hr"  onkeypress="return event.charCode >= 48" min="0" id="15" value="0"/> </td>
+              <td><input type="number" id="hr"  onkeypress="return event.charCode >= 48" min="0" name="15" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ng" onkeypress="return event.charCode >= 48" min="0" id="16" value="0"/> </td>
+              <td><input type="number" id="ng" onkeypress="return event.charCode >= 48" min="0" name="16" value="0"/> </td>
               <td>Nigeria</td>
 
 
@@ -158,9 +157,9 @@
               <td>06-17</td>
                 <td>8:00 am</td>
               <td>Costa Rica</td>
-              <td><input type="number" name="cr" onkeypress="return event.charCode >= 48" min="0" id="17" value="0"/> </td>
+              <td><input type="number" id="cr" onkeypress="return event.charCode >= 48" min="0" name="17" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="rs" onkeypress="return event.charCode >= 48" min="0" id="18" value="0"/> </td>
+              <td><input type="number" id="rs" onkeypress="return event.charCode >= 48" min="0" name="18" value="0"/> </td>
               <td>Serbia</td>
 
 
@@ -172,9 +171,9 @@
                 <td>11:00 am</td>
 
               <td> Germany</td>
-              <td><input type="number" name="de"  onkeypress="return event.charCode >= 48" min="0" id="19" value="0"/> </td>
+              <td><input type="number" id="de"  onkeypress="return event.charCode >= 48" min="0" name="19" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="mx" onkeypress="return event.charCode >= 48" min="0" id="20" value="0"/> </td>
+              <td><input type="number" id="mx" onkeypress="return event.charCode >= 48" min="0" name="20" value="0"/> </td>
               <td>Mexico</td>
 
 
@@ -184,9 +183,9 @@
               <td>06-17</td>
               <td>2:00 pm</td>
               <td>Brazil</td>
-              <td><input type="number" name="br" onkeypress="return event.charCode >= 48" min="0" id="21" value="0"/> </td>
+              <td><input type="number" id="br" onkeypress="return event.charCode >= 48" min="0" name="21" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ch" onkeypress="return event.charCode >= 48" min="0" id="22" value="0"/> </td>
+              <td><input type="number" id="ch" onkeypress="return event.charCode >= 48" min="0" name="22" value="0"/> </td>
               <td>Switzerland</td>
 
 
@@ -196,9 +195,9 @@
               <td>06-18</td>
               <td>8:00 am</td>
               <td>Sweden </td>
-              <td><input type="number" name="se" onkeypress="return event.charCode >= 48" min="0" id="23" value="0"/> </td>
+              <td><input type="number" id="se" onkeypress="return event.charCode >= 48" min="0" name="23" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="kr" onkeypress="return event.charCode >= 48" min="0" id="24" value="0"/> </td>
+              <td><input type="number" id="kr" onkeypress="return event.charCode >= 48" min="0" name="24" value="0"/> </td>
               <td>South Korea</td>
 
 
@@ -208,9 +207,9 @@
               <td>06-18</td>
                 <td>11:00 am</td>
               <td>Belgium</td>
-              <td><input type="number" name="be" onkeypress="return event.charCode >= 48" min="0" id="25" value="0"/> </td>
+              <td><input type="number" id="be" onkeypress="return event.charCode >= 48" min="0" name="25" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pa" onkeypress="return event.charCode >= 48" min="0" id="26" value="0"/> </td>
+              <td><input type="number" id="pa" onkeypress="return event.charCode >= 48" min="0" name="26" value="0"/> </td>
               <td>Panama</td>
 
 
@@ -220,9 +219,9 @@
               <td>06-18</td>
               <td>2:00 pm</td>
               <td>Tunisia</td>
-              <td><input type="number" name="tn" onkeypress="return event.charCode >= 48" min="0" id="27" value="0"/> </td>
+              <td><input type="number" id="tn" onkeypress="return event.charCode >= 48" min="0" name="27" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="gb" onkeypress="return event.charCode >= 48" min="0" id="28" value="0"/> </td>
+              <td><input type="number" id="gb" onkeypress="return event.charCode >= 48" min="0" name="28" value="0"/> </td>
               <td>England</td>
 
             </tr>
@@ -231,9 +230,9 @@
               <td>06-19</td>
               <td>8:00 am</td>
               <td>Colombia</td>
-              <td><input type="number" name="co" onkeypress="return event.charCode >= 48" min="0" id="29" value="0"/> </td>
+              <td><input type="number" id="co" onkeypress="return event.charCode >= 48" min="0" name="29" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="jp" onkeypress="return event.charCode >= 48" min="0" id="30" value="0"/> </td>
+              <td><input type="number" id="jp" onkeypress="return event.charCode >= 48" min="0" name="30" value="0"/> </td>
               <td>Japan</td>
 
             </tr>
@@ -242,9 +241,9 @@
               <td>06-19</td>
               <td>11:00 am</td>
               <td>Poland</td>
-              <td><input type="number" name="pl" onkeypress="return event.charCode >= 48" min="0" id="31" value="0"/> </td>
+              <td><input type="number" id="pl" onkeypress="return event.charCode >= 48" min="0" name="31" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="sn" onkeypress="return event.charCode >= 48" min="0" id="32" value="0"/> </td>
+              <td><input type="number" id="sn" onkeypress="return event.charCode >= 48" min="0" name="32" value="0"/> </td>
               <td>Senegal</td>
 
             </tr>
@@ -266,9 +265,9 @@
               <td>06-19</td>
               <td>2:00 pm</td>
               <td>Russia</td>
-              <td><input type="number" name="ru" onkeypress="return event.charCode >= 48" min="0" id="33" value="0"/> </td>
+              <td><input type="number" id="ru" onkeypress="return event.charCode >= 48" min="0" name="33" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="eg" onkeypress="return event.charCode >= 48" min="0" id="34" value="0"/> </td>
+              <td><input type="number" id="eg" onkeypress="return event.charCode >= 48" min="0" name="34" value="0"/> </td>
               <td>Egypt</td>
 
             </tr>
@@ -277,9 +276,9 @@
               <td>06-20</td>
               <td>8:00 am</td>
               <td>Portugal</td>
-              <td><input type="number" name="pt" onkeypress="return event.charCode >= 48" min="0" id="35" value="0"/> </td>
+              <td><input type="number" id="pt" onkeypress="return event.charCode >= 48" min="0" name="35" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ma" onkeypress="return event.charCode >= 48" min="0" id="36" value="0"/> </td>
+              <td><input type="number" id="ma" onkeypress="return event.charCode >= 48" min="0" name="36" value="0"/> </td>
               <td>Morocco</td>
 
             </tr>
@@ -288,9 +287,9 @@
               <td>06-20</td>
               <td>11:00 am</td>
               <td>Uruguay</td>
-              <td><input type="number" name="uy" onkeypress="return event.charCode >= 48" min="0" id="37" value="0"/> </td>
+              <td><input type="number" id="uy" onkeypress="return event.charCode >= 48" min="0" name="37" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="sa" onkeypress="return event.charCode >= 48" min="0" id="38" value="0"/> </td>
+              <td><input type="number" id="sa" onkeypress="return event.charCode >= 48" min="0" name="38" value="0"/> </td>
               <td>Saudi Arabia</td>
 
             </tr>
@@ -299,9 +298,9 @@
               <td>06-20</td>
               <td>2:00 pm</td>
               <td>Iran</td>
-              <td><input type="number" name="ir"  onkeypress="return event.charCode >= 48" min="0" id="39" value="0"/> </td>
+              <td><input type="number" id="ir"  onkeypress="return event.charCode >= 48" min="0" name="39" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="es" onkeypress="return event.charCode >= 48" min="0" id="40" value="0"/> </td>
+              <td><input type="number" id="es" onkeypress="return event.charCode >= 48" min="0" name="40" value="0"/> </td>
               <td>Spain</td>
 
             </tr>
@@ -310,9 +309,9 @@
               <td>06-21</td>
               <td>8:00 am</td>
               <td>Denmark</td>
-              <td><input type="number" name="dk" onkeypress="return event.charCode >= 48" min="0" id="41" value="0"/> </td>
+              <td><input type="number" id="dk" onkeypress="return event.charCode >= 48" min="0" name="41" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="au" onkeypress="return event.charCode >= 48" min="0" id="42" value="0"/> </td>
+              <td><input type="number" id="au" onkeypress="return event.charCode >= 48" min="0" name="42" value="0"/> </td>
               <td>Australia</td>
 
             </tr>
@@ -321,9 +320,9 @@
               <td>06-21</td>
               <td>11:00 am</td>
               <td>France</td>
-              <td><input type="number" name="fr" onkeypress="return event.charCode >= 48" min="0" id="43" value="0"/> </td>
+              <td><input type="number" id="fr" onkeypress="return event.charCode >= 48" min="0" name="43" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pe" onkeypress="return event.charCode >= 48" min="0" id="44" value="0"/> </td>
+              <td><input type="number" id="pe" onkeypress="return event.charCode >= 48" min="0" name="44" value="0"/> </td>
               <td>Peru</td>
 
             </tr>
@@ -332,9 +331,9 @@
               <td>06-21</td>
               <td>2:00 pm</td>
               <td>Argentina</td>
-              <td><input type="number" name="ar" onkeypress="return event.charCode >= 48" min="0" id="45" value="0"/> </td>
+              <td><input type="number" id="ar" onkeypress="return event.charCode >= 48" min="0" name="45" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="hr" onkeypress="return event.charCode >= 48" min="0" id="46" value="0"/> </td>
+              <td><input type="number" id="hr" onkeypress="return event.charCode >= 48" min="0" name="46" value="0"/> </td>
               <td>Croatia</td>
 
             </tr>
@@ -343,9 +342,9 @@
               <td>06-22</td>
               <td>8:00 am</td>
               <td>Brazil</td>
-              <td><input type="number" name="br" onkeypress="return event.charCode >= 48" min="0" id="47" value="0"/> </td>
+              <td><input type="number" id="br" onkeypress="return event.charCode >= 48" min="0" name="47" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="cr" onkeypress="return event.charCode >= 48" min="0" id="48" value="0"/> </td>
+              <td><input type="number" id="cr" onkeypress="return event.charCode >= 48" min="0" name="48" value="0"/> </td>
               <td>Costa Rica</td>
 
             </tr>
@@ -354,9 +353,9 @@
               <td>06-22</td>
               <td>11:00 am</td>
               <td>Nigeria</td>
-              <td><input type="number" name="ng"  onkeypress="return event.charCode >= 48" min="0" id="49" value="0"/> </td>
+              <td><input type="number" id="ng"  onkeypress="return event.charCode >= 48" min="0" name="49" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="is" onkeypress="return event.charCode >= 48" min="0" id="50" value="0"/> </td>
+              <td><input type="number" id="is" onkeypress="return event.charCode >= 48" min="0" name="50" value="0"/> </td>
               <td>Iceland</td>
 
             </tr>
@@ -365,9 +364,9 @@
               <td>06-22</td>
               <td>2:00 pm</td>
               <td>Serbia</td>
-              <td><input type="number" name="rs" onkeypress="return event.charCode >= 48" min="0" id="51" value="0"/> </td>
+              <td><input type="number" id="rs" onkeypress="return event.charCode >= 48" min="0" name="51" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ch"  onkeypress="return event.charCode >= 48" min="0" id="52" value="0"/> </td>
+              <td><input type="number" id="ch"  onkeypress="return event.charCode >= 48" min="0" name="52" value="0"/> </td>
               <td>Switzerland</td>
 
             </tr>
@@ -376,9 +375,9 @@
               <td>06-23</td>
               <td>8:00 am</td>
               <td>Belgium</td>
-              <td><input type="number" name="be"  onkeypress="return event.charCode >= 48" min="0" id="53" value="0"/> </td>
+              <td><input type="number" id="be"  onkeypress="return event.charCode >= 48" min="0" name="53" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="tn" onkeypress="return event.charCode >= 48" min="0" id="54" value="0"/> </td>
+              <td><input type="number" id="tn" onkeypress="return event.charCode >= 48" min="0" name="54" value="0"/> </td>
               <td>Tunisia</td>
 
             </tr>
@@ -387,9 +386,9 @@
               <td>06-23</td>
               <td>11:00 am</td>
               <td>South Korea</td>
-              <td><input type="number" name="kr" onkeypress="return event.charCode >= 48" min="0" id="55" value="0"/> </td>
+              <td><input type="number" id="kr" onkeypress="return event.charCode >= 48" min="0" name="55" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="mx" onkeypress="return event.charCode >= 48" min="0" id="56" value="0" /> </td>
+              <td><input type="number" id="mx" onkeypress="return event.charCode >= 48" min="0" name="56" value="0" /> </td>
               <td>Mexico</td>
 
             </tr>
@@ -398,9 +397,9 @@
               <td>06-23</td>
               <td>2:00 pm</td>
               <td>Germany</td>
-              <td><input type="number" name="de" onkeypress="return event.charCode >= 48" min="0" id="57" value="0"/> </td>
+              <td><input type="number" id="de" onkeypress="return event.charCode >= 48" min="0" name="57" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="se" onkeypress="return event.charCode >= 48" min="0" id="58" value="0"/> </td>
+              <td><input type="number" id="se" onkeypress="return event.charCode >= 48" min="0" name="58" value="0"/> </td>
               <td>Sweden</td>
 
             </tr>
@@ -409,9 +408,9 @@
               <td>06-24</td>
               <td>8:00 am</td>
               <td>England</td>
-              <td><input type="number" name="gb" onkeypress="return event.charCode >= 48" min="0" id="59" value="0"/> </td>
+              <td><input type="number" id="gb" onkeypress="return event.charCode >= 48" min="0" name="59" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pa" onkeypress="return event.charCode >= 48" min="0" id="60" value="0"/> </td>
+              <td><input type="number" id="pa" onkeypress="return event.charCode >= 48" min="0" name="60" value="0"/> </td>
               <td>Panama</td>
 
             </tr>
@@ -420,9 +419,9 @@
               <td>06-24</td>
               <td>11:00 am</td>
               <td>Japan</td>
-              <td><input type="number" name="jp" onkeypress="return event.charCode >= 48" min="0" id="61" value="0"/> </td>
+              <td><input type="number" id="jp" onkeypress="return event.charCode >= 48" min="0" name="61" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="sn" onkeypress="return event.charCode >= 48" min="0" id="62" value="0"/> </td>
+              <td><input type="number" id="sn" onkeypress="return event.charCode >= 48" min="0" name="62" value="0"/> </td>
               <td>Senegal</td>
 
             </tr>
@@ -431,9 +430,9 @@
               <td>06-24</td>
               <td>2:00 pm</td>
               <td>Poland</td>
-              <td><input type="number" name="pl"  onkeypress="return event.charCode >= 48" min="0" id="63" value="0"/> </td>
+              <td><input type="number" id="pl"  onkeypress="return event.charCode >= 48" min="0" name="63" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="co" onkeypress="return event.charCode >= 48" min="0" id="64" value="0"/> </td>
+              <td><input type="number" id="co" onkeypress="return event.charCode >= 48" min="0" name="64" value="0"/> </td>
               <td>Colombia</td>
 
             </tr>
@@ -456,9 +455,9 @@
               <td>06-25</td>
               <td>10:00 am</td>
               <td>Saudi Arabia</td>
-              <td><input type="number" name="sa" onkeypress="return event.charCode >= 48" min="0" id="65" value="0"/> </td>
+              <td><input type="number" id="sa" onkeypress="return event.charCode >= 48" min="0" name="65" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="eg" onkeypress="return event.charCode >= 48" min="0" id="66" value="0"/> </td>
+              <td><input type="number" id="eg" onkeypress="return event.charCode >= 48" min="0" name="66" value="0"/> </td>
               <td>Egypt</td>
 
             </tr>
@@ -467,9 +466,9 @@
               <td>06-25</td>
               <td>10:00 am</td>
               <td>Uruguay</td>
-              <td><input type="number" name="uy" onkeypress="return event.charCode >= 48" min="0" id="67" value="0"/> </td>
+              <td><input type="number" id="uy" onkeypress="return event.charCode >= 48" min="0" name="67" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ru" onkeypress="return event.charCode >= 48" min="0" id="68" value="0" /> </td>
+              <td><input type="number" id="ru" onkeypress="return event.charCode >= 48" min="0" name="68" value="0" /> </td>
               <td>Russia</td>
 
             </tr>
@@ -478,9 +477,9 @@
               <td>06-25</td>
               <td>2:00 pm</td>
               <td>Iran</td>
-              <td><input type="number" name="ir" onkeypress="return event.charCode >= 48" min="0" id="69" value="0"/> </td>
+              <td><input type="number" id="ir" onkeypress="return event.charCode >= 48" min="0" name="69" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pt" onkeypress="return event.charCode >= 48" min="0" id="70" value="0"/> </td>
+              <td><input type="number" id="pt" onkeypress="return event.charCode >= 48" min="0" name="70" value="0"/> </td>
               <td>Portugal</td>
 
             </tr>
@@ -489,9 +488,9 @@
               <td>06-25</td>
               <td>2:00 pm</td>
               <td>Spain</td>
-              <td><input type="number" name="es" onkeypress="return event.charCode >= 48" min="0" id="71" value="0"/> </td>
+              <td><input type="number" id="es" onkeypress="return event.charCode >= 48" min="0" name="71" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ma" onkeypress="return event.charCode >= 48" min="0" id="72" value="0"/> </td>
+              <td><input type="number" id="ma" onkeypress="return event.charCode >= 48" min="0" name="72" value="0"/> </td>
               <td>Morocco</td>
 
             </tr>
@@ -500,9 +499,9 @@
               <td>06-26</td>
               <td>10:00 am</td>
               <td>Australia</td>
-              <td><input type="number" name="au" onkeypress="return event.charCode >= 48" min="0" id="73" value="0"/> </td>
+              <td><input type="number" id="au" onkeypress="return event.charCode >= 48" min="0" name="73" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pe" onkeypress="return event.charCode >= 48" min="0" id="74" value="0"/> </td>
+              <td><input type="number" id="pe" onkeypress="return event.charCode >= 48" min="0" name="74" value="0"/> </td>
               <td>Peru</td>
 
             </tr>
@@ -511,9 +510,9 @@
               <td>06-26</td>
               <td>10:00 am</td>
               <td>Denmark</td>
-              <td><input type="number" name="dk" onkeypress="return event.charCode >= 48" min="0" id="75" value="0"/> </td>
+              <td><input type="number" id="dk" onkeypress="return event.charCode >= 48" min="0" name="75" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="fr" onkeypress="return event.charCode >= 48" min="0" id="76" value="0"/> </td>
+              <td><input type="number" id="fr" onkeypress="return event.charCode >= 48" min="0" name="76" value="0"/> </td>
               <td>France</td>
 
             </tr>
@@ -522,9 +521,9 @@
               <td>06-26</td>
               <td>2:00 pm</td>
               <td>Nigeria</td>
-              <td><input type="number" name="ng" onkeypress="return event.charCode >= 48" min="0" id="77" value="0"/> </td>
+              <td><input type="number" id="ng" onkeypress="return event.charCode >= 48" min="0" name="77" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="ar" onkeypress="return event.charCode >= 48" min="0" id="78" value="0"/> </td>
+              <td><input type="number" id="ar" onkeypress="return event.charCode >= 48" min="0" name="78" value="0"/> </td>
               <td>Argentina</td>
 
             </tr>
@@ -533,9 +532,9 @@
               <td>06-26</td>
               <td>2:00 pm</td>
               <td>Iceland</td>
-              <td><input type="number" name="is" onkeypress="return event.charCode >= 48" min="0" id="79" value="0"/> </td>
+              <td><input type="number" id="is" onkeypress="return event.charCode >= 48" min="0" name="79" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="hr" onkeypress="return event.charCode >= 48" min="0" id="80" value="0"/> </td>
+              <td><input type="number" id="hr" onkeypress="return event.charCode >= 48" min="0" name="80" value="0"/> </td>
               <td>Croatia</td>
 
             </tr>
@@ -544,9 +543,9 @@
               <td>06-27</td>
               <td>10:00 am</td>
               <td>South Korea</td>
-              <td><input type="number" name="kr" onkeypress="return event.charCode >= 48" min="0" id="81" value="0"/> </td>
+              <td><input type="number" id="kr" onkeypress="return event.charCode >= 48" min="0" name="81" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="de"  onkeypress="return event.charCode >= 48" min="0" id="82" value="0"/> </td>
+              <td><input type="number" id="de"  onkeypress="return event.charCode >= 48" min="0" name="82" value="0"/> </td>
               <td>Germany</td>
 
             </tr>
@@ -555,9 +554,9 @@
               <td>06-27</td>
               <td>10:00 am</td>
               <td>Mexico</td>
-              <td><input type="number" name="mx"  onkeypress="return event.charCode >= 48" min="0" id="83" value="0"/> </td>
+              <td><input type="number" id="mx"  onkeypress="return event.charCode >= 48" min="0" name="83" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="se" onkeypress="return event.charCode >= 48" min="0" id="84" value="0"/> </td>
+              <td><input type="number" id="se" onkeypress="return event.charCode >= 48" min="0" name="84" value="0"/> </td>
               <td>Sweden</td>
 
             </tr>
@@ -566,9 +565,9 @@
               <td>06-27</td>
               <td>2:00 pm</td>
               <td>Switzerland</td>
-              <td><input type="number" name="ch" onkeypress="return event.charCode >= 48" min="0" id="85" value="0"/> </td>
+              <td><input type="number" id="ch" onkeypress="return event.charCode >= 48" min="0" name="85" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="cr" onkeypress="return event.charCode >= 48" min="0" id="86" value="0"/> </td>
+              <td><input type="number" id="cr" onkeypress="return event.charCode >= 48" min="0" name="86" value="0"/> </td>
               <td>Costa Rica</td>
 
             </tr>
@@ -577,9 +576,9 @@
               <td>06-27</td>
               <td>2:00 pm</td>
               <td>Serbia</td>
-              <td><input type="number" name="rs" onkeypress="return event.charCode >= 48" min="0" id="87" value="0"/> </td>
+              <td><input type="number" id="rs" onkeypress="return event.charCode >= 48" min="0" name="87" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="br" onkeypress="return event.charCode >= 48" min="0" id="88" value="0"/> </td>
+              <td><input type="number" id="br" onkeypress="return event.charCode >= 48" min="0" name="88" value="0"/> </td>
               <td>Brazil</td>
 
             </tr>
@@ -588,9 +587,9 @@
               <td>06-28</td>
               <td>10:00 am</td>
               <td>Senegal</td>
-              <td><input type="number" name="sn" onkeypress="return event.charCode >= 48" min="0" id="89" value="0"/> </td>
+              <td><input type="number" id="sn" onkeypress="return event.charCode >= 48" min="0" name="89" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="co" onkeypress="return event.charCode >= 48" min="0" id="90" value="0"/> </td>
+              <td><input type="number" id="co" onkeypress="return event.charCode >= 48" min="0" name="90" value="0"/> </td>
               <td>Colombia</td>
 
             </tr>
@@ -599,9 +598,9 @@
               <td>06-28</td>
               <td>10:00 am</td>
               <td>Japan</td>
-              <td><input type="number" name="jp"  onkeypress="return event.charCode >= 48" min="0" id="91" value="0"/> </td>
+              <td><input type="number" id="jp"  onkeypress="return event.charCode >= 48" min="0" name="91" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="pl" onkeypress="return event.charCode >= 48" min="0" id="92" value="0"/> </td>
+              <td><input type="number" id="pl" onkeypress="return event.charCode >= 48" min="0" name="92" value="0"/> </td>
               <td>Poland</td>
 
             </tr>
@@ -610,9 +609,9 @@
               <td>06-28</td>
               <td>2:00 pm</td>
               <td>England</td>
-              <td><input type="number" name="gb" onkeypress="return event.charCode >= 48" min="0" id="93" value="0"/> </td>
+              <td><input type="number" id="gb" onkeypress="return event.charCode >= 48" min="0" name="93" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="be" onkeypress="return event.charCode >= 48" min="0" id="94" value="0"/> </td>
+              <td><input type="number" id="be" onkeypress="return event.charCode >= 48" min="0" name="94" value="0"/> </td>
               <td>Belgium</td>
 
             </tr>
@@ -621,9 +620,9 @@
               <td>06-28</td>
               <td>2:00 pm</td>
               <td>Panama</td>
-              <td><input type="number" name="pa" onkeypress="return event.charCode >= 48" min="0" id="95" value="0"/> </td>
+              <td><input type="number" id="pa" onkeypress="return event.charCode >= 48" min="0" name="95" value="0"/> </td>
               <td>  vs.  </td>
-              <td><input type="number" name="tn" onkeypress="return event.charCode >= 48" min="0" id="96" value="0"/> </td>
+              <td><input type="number" id="tn" onkeypress="return event.charCode >= 48" min="0" name="96" value="0"/> </td>
               <td>Tunisia</td>
 
             </tr>
@@ -640,8 +639,8 @@
       </div>
       <div class="col-sm-6">
         <h4> Group Results  </h4>
-      <div class="table-responsive" id="groupTable">
-      <table id="groupsTable" class="table groupsTable">
+      <div class="table-responsive" name="groupTable">
+      <table name="groupsTable" class="table groupsTable">
         <th>Group A</th>
         <th>MP</th>
         <th>W</th>
@@ -911,6 +910,6 @@
     </div>
   </div>
 </div>
-  <button type="button" id="testBtn">Test</button>
+  <button type="button" name="testBtn">Test</button>
     </body>
 </html>

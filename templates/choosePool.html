@@ -27,9 +27,9 @@
             </li>
 
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          <form action="logout" method="POST" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="hidden" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
           </form>
         </div>
       </nav>
@@ -41,13 +41,16 @@
   <th>Pool Name</th>
   <th>Date Created</th>
   <th></th>
+  <th></th>
     {% for d in data %}
       <tr>
         <td>{{ d.name }}</td>
         <td>{{ d.date }}</td>
         <td>
-          <form action="selectPool" method="POST">
+          <form action="viewStandings" method="POST">
             <input type="hidden" name="id" value="{{ d.id }}" />
+          <label>Password: </label>
+          <input type="text" name="password">
           <input type="submit" value="Select Pool">
         </td>
       </tr><br>
